@@ -20,7 +20,7 @@ internal static class Services
         if (IsFinal)
             throw new ServiceLocatorNotOpenException();
 
-        _registry![(typeof(T))] = service;
+        _registry![typeof(T)] = service;
     }
 
     public static bool TryLocate<T>(out T? t)
